@@ -89,5 +89,22 @@ namespace Bases
             var window = new proveedoresLista { Owner = this };
             window.Show();
         }
+
+        private void MenuItem_Click_1(object sender, RoutedEventArgs e)
+        {
+            var window = new showPreferences { Owner = this };
+            window.Show();
+        }
+        private void nuevoAbono (object sender, RoutedEventArgs e)
+        {
+            var window = new nuevoAbono { Owner = this };
+            window.Show();
+        }
+        private void nuevoApartado (object sender, RoutedEventArgs e)
+        {
+            var window = new nuevoApartado { Owner = this };
+            window.Show();
+
+        }
     }
 }

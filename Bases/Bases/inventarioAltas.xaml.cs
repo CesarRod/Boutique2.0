@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Npgsql;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,8 +21,10 @@ namespace Bases
     public partial class Inventario : Window
     {
         Conexion con;
-        public Inventario()
+        string modeloIn = "";
+        public Inventario(string modeloIn="")
         {
+            this.modeloIn = modeloIn;
             List<String> tipos = new List<String>();
             tipos.Add("Sweater");
             tipos.Add("Blusa");
@@ -41,21 +44,57 @@ namespace Bases
             InitializeComponent();
             tipoPrenda.CustomSource = tipos;
             con = new Conexion();
+            if (modeloIn != "")
+            {
+                string query = "SELECT * FROM articulo where modelo='" + modeloIn+"'";
+                NpgsqlDataReader dataReader = con.Query(query);
+                while (dataReader.Read())
+                {
+                    modelo.Text = dataReader[1].ToString();
+                    precioVenta.Text = dataReader[2].ToString();
+                    precioProv.Text = dataReader[3].ToString();
+                    description.Text = dataReader[4].ToString();
+                    tipoPrenda.Text = dataReader[5].ToString();
+
+                }
+                dataReader.Close();
+                agregar.Content = "Guardar";
+            }
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            string valores =  "DEFAULT,'" + modelo.Text  + "',"
-                + precioVenta.Text + "," + precioProv.Text + ",'" +
-                description.Text + "','" + tipoPrenda.SelectedValue + "'";
-            string query = "INSERT INTO articulo(id_articulo,modelo,precio_venta, precio_proveedor, descripcion,tipo_prenda)" +
-                "VALUES(" + valores + ");";
-            agregar.IsEnabled = false;
+            string query = "";
+            if(modeloIn == "")
+            {
+                string valores = "DEFAULT,'" + modelo.Text + "',"
+               + precioVenta.Text + "," + precioProv.Text + ",'" +
+               description.Text + "','" + tipoPrenda.SelectedValue + "'";
+                query = "INSERT INTO articulo(id_articulo,modelo,precio_venta, precio_proveedor, descripcion,tipo_prenda)" +
+                    "VALUES(" + valores + ");";
+                agregar.IsEnabled = false;
+            }
+            else
+            {
+                query = "UPDATE articulo set(precio_venta, precio_proveedor, descripcion, tipo_prenda) = " +
+                    "('"+precioVenta.Text+"', '"+precioProv.Text+"', '"+description.Text+"', '"+tipoPrenda.Text+"') WHERE modelo = '"+modeloIn+"';";
+            }
+           
             try
             {
                 
                 con.Query(query);
-                MessageBox.Show("Articulo agregado exitosamente");
+                if(modeloIn == "")
+                {
+                    MessageBox.Show("Articulo agregado exitosamente");
+                }
+                else
+                {
+                    MessageBox.Show("Articulo modificado exitosamente");
+                    this.Close();
+                }
+
+                
                 modelo.Clear();
                 precioVenta.Clear();
                 precioProv.Clear();

@@ -5,16 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Bases"
         mc:Ignorable="d"
-        Title="Modificar articulo" Height="300" Width="300">
+        Title="Modificar articulo" Height="327" Width="389">
     <Grid>
-        <Label Content="Código&#xD;&#xA;" HorizontalAlignment="Left" Margin="10,5,0,0" VerticalAlignment="Top" Height="24"/>
-        <TextBox HorizontalAlignment="Left" Height="25" Margin="10,34,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="64"/>
-        <Label Content="Modelo" HorizontalAlignment="Left" Margin="143,3,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Height="25" Margin="143,34,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="72"/>
-        <DataGrid HorizontalAlignment="Left" Height="83" Margin="10,82,0,0" VerticalAlignment="Top" Width="272"/>
-        <Button Content="Buscar" HorizontalAlignment="Left" Margin="115,239,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button Content="Guardar" HorizontalAlignment="Left" Margin="21,239,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button Content="Atras" HorizontalAlignment="Left" Margin="203,239,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+        <Label Content="Modelo" HorizontalAlignment="Left" Margin="10,9,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="modelo" HorizontalAlignment="Left" Height="25" Margin="10,40,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="72"/>
+        <DataGrid x:Name="lista" HorizontalAlignment="Left" CanUserAddRows="False" Height="108" Margin="10,82,0,0" VerticalAlignment="Top" Width="355"/>
+        <Button Content="Buscar" HorizontalAlignment="Left" Margin="290,40,0,0" VerticalAlignment="Top" Width="75" Click="busqueda"/>
+        <Button Content="Modificar" HorizontalAlignment="Left" Margin="15,230,0,0" VerticalAlignment="Top" Width="75" Click="modificarFunc"/>
+        <Button Content="Atras" HorizontalAlignment="Left" Margin="290,230,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
 
     </Grid>
 </Window>

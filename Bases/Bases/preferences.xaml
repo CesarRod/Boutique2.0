@@ -6,23 +6,21 @@
         xmlns:local="clr-namespace:Bases"
         xmlns:syncfusion="http://schemas.syncfusion.com/wpf" x:Class="Bases.preferences"
         mc:Ignorable="d"
-        Title="Preferencias de cliente" Height="293.36" Width="482.294">
+        Title="Preferencias de cliente" Height="362" Width="524">
     <Grid>
         <Label x:Name="label" Content="Nombre:" HorizontalAlignment="Left" Margin="55,10,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="label1" Content="Apellido paterno:" HorizontalAlignment="Left" Margin="10,36,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="label2" Content="Apellido materno:" HorizontalAlignment="Left" Margin="10,62,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="116,14,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="23" Margin="116,40,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="textBox2" HorizontalAlignment="Left" Height="23" Margin="116,66,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="button" Content="Buscar" HorizontalAlignment="Left" Margin="325,40,0,0" VerticalAlignment="Top" Width="75" Height="23"/>
-        <Button x:Name="button1" Content="Agregar " HorizontalAlignment="Left" Margin="300,232,0,0" VerticalAlignment="Top" Width="75" />
-        <Button x:Name="button2" Content="Atras" HorizontalAlignment="Left" Margin="389,232,0,0" VerticalAlignment="Top" Width="75" Click="button2_Click"/>
-        <syncfusion:AutoComplete HorizontalAlignment="Left" Height="25" Margin="100,133,0,0" VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Height="28" Margin="319,130,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="145"/>
-        <syncfusion:AutoComplete HorizontalAlignment="Left" Height="25" Margin="100,180,0,0" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Talla" HorizontalAlignment="Left" Margin="62,132,0,0" VerticalAlignment="Top"/>
-        <Label Content="Descripcion" HorizontalAlignment="Left" Margin="242,130,0,0" VerticalAlignment="Top"/>
-        <Label Content="Tipo de prenda" HorizontalAlignment="Left" Margin="10,180,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="nombre" HorizontalAlignment="Left" Height="23" Margin="116,14,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="buscaarButton" Content="Buscar" HorizontalAlignment="Left" Margin="325,14,0,0" VerticalAlignment="Top" Width="75" Height="23" Click="busqueda"/>
+        <Button x:Name="agregar" Content="Agregar " HorizontalAlignment="Left" Margin="320,290,0,0" VerticalAlignment="Top" Width="75" Click="agregarPreferencia"/>
+        <Button x:Name="button2" Content="Atras" HorizontalAlignment="Left" Margin="409,290,0,0" VerticalAlignment="Top" Width="75" Click="button2_Click"/>
+        <syncfusion:AutoComplete x:Name="talla" HorizontalAlignment="Left" Height="25" Margin="120,207,0,0" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="descripcion" HorizontalAlignment="Left" Height="41" Margin="339,204,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="145"/>
+        <syncfusion:AutoComplete x:Name="tipoPrenda" HorizontalAlignment="Left" Height="25" Margin="120,254,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Talla" HorizontalAlignment="Left" Margin="82,206,0,0" VerticalAlignment="Top"/>
+        <Label Content="Descripcion" HorizontalAlignment="Left" Margin="262,204,0,0" VerticalAlignment="Top"/>
+        <Label Content="Tipo de prenda" HorizontalAlignment="Left" Margin="30,254,0,0" VerticalAlignment="Top"/>
+        <DataGrid x:Name="lista" CanUserAddRows="False" HorizontalAlignment="Left" Height="105" Margin="10,45,0,0" VerticalAlignment="Top" Width="496"/>
+        <Button x:Name="seleccionar" Content="Seleccionar" HorizontalAlignment="Left" Margin="425,165,0,0" VerticalAlignment="Top" Width="75" Click="seleccionarFunc"/>
 
     </Grid>
 </Window>

@@ -11,7 +11,8 @@
         <Menu x:Name="menu" Height="18" VerticalContentAlignment="Top" VerticalAlignment="Top" HorizontalContentAlignment="Stretch">
             <MenuItem Header="Clientes"  Width="64" Click="MenuItem_Click">
                 <MenuItem Header="Alta" Click="createClient"/>
-                <MenuItem Header="Preferencias" Click="preferencesClient"/>
+                <MenuItem Header="Agregar Preferencias" Click="preferencesClient"/>
+                <MenuItem Header="Ver preferencias" Click="MenuItem_Click_1"/>
             </MenuItem>
             <MenuItem Header="Inventario" >
                 <MenuItem Header="Altas" Click="altaArticulo"/>
@@ -31,9 +32,8 @@
                 <MenuItem Header="Cancelar/Actualizar"/>
             </MenuItem>
             <MenuItem Header="Apartados">
-                <MenuItem Header="Nuevo"/>
-                <MenuItem Header="Abonar"/>
-                <MenuItem Header="Eliminar"/>
+                <MenuItem Header="Nuevo" Click="nuevoApartado"/>
+                <MenuItem Header="Abonar" Click="nuevoAbono"/>
             </MenuItem>
 
             <MenuItem Header="Reportes">

@@ -80,6 +80,12 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="conexion.cs" />
+    <Compile Include="nuevoAbono.xaml.cs">
+      <DependentUpon>nuevoAbono.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="nuevoApartado.xaml.cs">
+      <DependentUpon>nuevoApartado.xaml</DependentUpon>
+    </Compile>
     <Compile Include="pedidosActualizarEliminar.xaml.cs">
       <DependentUpon>pedidosActualizarEliminar.xaml</DependentUpon>
     </Compile>
@@ -101,6 +107,9 @@
     </Compile>
     <Compile Include="proveedoresModificarFields.xaml.cs">
       <DependentUpon>proveedoresModificarFields.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="showPreferences.xaml.cs">
+      <DependentUpon>showPreferences.xaml</DependentUpon>
     </Compile>
     <Page Include="clients.xaml">
       <SubType>Designer</SubType>
@@ -156,6 +165,14 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="nuevoAbono.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="nuevoApartado.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="pedidosActualizarEliminar.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -185,6 +202,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="proveedoresModificarFields.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="showPreferences.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
