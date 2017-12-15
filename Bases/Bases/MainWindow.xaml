@@ -36,8 +36,25 @@
                 <MenuItem Header="Abonar" Click="nuevoAbono"/>
             </MenuItem>
 
-            <MenuItem Header="Reportes">
-                <MenuItem  Header="Proximamente"/>
+             <MenuItem Header="Reportes">
+                <MenuItem  Header="Cantidad de Prendas de Cada Tipo" Click="reporte1"/>
+                <MenuItem  Header="Cantidad de Prendas por Tipo y Proveedor" Click="reporte2"/>
+                <MenuItem  Header="Cantidad de Prendas por Tipo, Modelo y Proveedor" Click="reporte3"/>
+                <MenuItem  Header="Reporte de Compras por Mes" Click="reporte4"/>
+                <MenuItem  Header="Reporte de Compras por Proveedor" Click="reporte5"/>
+                <MenuItem  Header="Compras por Articulo" Click="reporte6"/>
+                <MenuItem  Header="Ventas por fecha escogida" Click="reporte7"/>
+                <MenuItem  Header="Ventas por proveedor (por fecha)" Click="reporte8"/>
+                <MenuItem  Header="Ventas por proveedor (por busqueda de proveedor)" Click="reporte9"/>
+                <MenuItem  Header="Ganancias en la fecha seleccionada" Click="reporte10"/>
+            </MenuItem>
+            <MenuItem Header="Info util">
+                <MenuItem Header="Buscar clientes por preferencia" Click="procedure1"></MenuItem>
+                <MenuItem Header="Numero de facturas con gastos de envio" Click="procedure2"></MenuItem>
+                <MenuItem Header="Apartados próximos a vencer" Click="procedure3"></MenuItem>
+                <MenuItem Header="Articulos con mucho tiempo en almacen" Click="procedure4"></MenuItem>
+                <MenuItem Header="Clientes con más de tres preferencias registradas" Click="funcionExtra1"></MenuItem>
+                <MenuItem Header="Apartados de los ultimos 2 meses con un total minimo menor a 200" Click="funcionExtra2"></MenuItem>
             </MenuItem>
         </Menu>
     </Grid>

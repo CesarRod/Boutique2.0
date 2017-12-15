@@ -106,5 +106,96 @@ namespace Bases
             window.Show();
 
         }
+
+        private void reporte1(object sender, RoutedEventArgs e)
+        {
+            var window = new reporte1 {Owner = this};
+            window.Show();
+        }
+
+        private void reporte2(object sender, RoutedEventArgs e)
+        {
+            var window = new reporte2 {Owner = this};
+            window.Show();
+        }
+
+        private void reporte3(object sender, RoutedEventArgs e)
+        {
+            var window = new reporte3 {Owner = this};
+            window.Show();
+        }
+
+        private void reporte4(object sender, RoutedEventArgs e)
+        {
+            var window = new reporte4 {Owner = this};
+            window.Show();
+        }
+
+        private void reporte5(object sender, RoutedEventArgs e)
+        {
+            var window = new reporte5 { Owner = this };
+            window.Show();
+        }
+
+        private void reporte6(object sender, RoutedEventArgs e)
+        {
+            var window = new reporte6 { Owner = this };
+            window.Show();
+        }
+
+        private void reporte7(object sender, RoutedEventArgs e)
+        {
+            var window = new reporte7 { Owner = this };
+            window.Show();
+        }
+
+        private void reporte8(object sender, RoutedEventArgs e)
+        {
+            var window = new reporte8 { Owner = this };
+            window.Show();
+        }
+
+        private void reporte9(object sender, RoutedEventArgs e)
+        {
+            var window = new reporte9 { Owner = this };
+            window.Show();
+        }
+
+        private void reporte10(object sender, RoutedEventArgs e)
+        {
+            var window = new reporte10 { Owner = this };
+            window.Show();
+        }
+
+        private void procedure1(object sender, RoutedEventArgs e)
+        {
+            var window = new procedure1 { Owner = this };
+            window.Show();
+        }
+        private void procedure2(object sender, RoutedEventArgs e)
+        {
+            var window = new procedure2 { Owner = this };
+            window.Show();
+        }
+        private void procedure3(object sender, RoutedEventArgs e)
+        {
+            var window = new procedure3 { Owner = this };
+            window.Show();
+        }
+        private void procedure4(object sender, RoutedEventArgs e)
+        {
+            var window = new procedure4 { Owner = this };
+            window.Show();
+        }
+        private void funcionExtra1(object sender, RoutedEventArgs e)
+        {
+            var window = new funcionExtra1 { Owner = this };
+            window.Show();
+        }
+        private void funcionExtra2(object sender, RoutedEventArgs e)
+        {
+            var window = new funcionExtra2 { Owner = this };
+            window.Show();
+        }
     }
 }

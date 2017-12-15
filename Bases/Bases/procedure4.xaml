@@ -1,0 +1,18 @@
+﻿<Window x:Class="Bases.procedure4"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Bases"
+        mc:Ignorable="d"
+        Title="Articulos con mucho tiempo en almacen" Height="336.126" Width="528.517">
+    <Grid>
+        <DataGrid x:Name="lista" CanUserAddRows="False" Height="177" Margin="10,71,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="478"/>
+        <Button x:Name="atras" Content="Atras" Margin="399,253,0,0" VerticalAlignment="Top" Click="Button_Click" Height="20" HorizontalAlignment="Left" Width="89"/>
+        <Button Content="Consultar" Margin="399,39,-182,0" VerticalAlignment="Top" Height="20" Click="Button_Click_1" HorizontalAlignment="Left" Width="89"/>
+        <Label Content="Dias minimos" Margin="12,10,370,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="dias" Height="23" Margin="10,36,370,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
+        <Label Content="Cantidad minima que debe haberse vendido" Margin="211,10,33,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="cant" Height="23" Margin="211,36,155,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
+    </Grid>
+</Window>

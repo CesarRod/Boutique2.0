@@ -1,0 +1,13 @@
+﻿<Window x:Class="Bases.funcionExtra2"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Bases"
+        mc:Ignorable="d"
+        Title="Apartados de los ultimos 2 meses con un total minimo menor a 200" Height="336.126" Width="316.475">
+    <Grid>
+        <DataGrid x:Name="lista" CanUserAddRows="False" Height="222" Margin="10,26,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="287"/>
+        <Button x:Name="atras" Content="Atras" Margin="208,264,0,0" VerticalAlignment="Top" Click="Button_Click" Height="20" HorizontalAlignment="Left" Width="89"/>
+    </Grid>
+</Window>
