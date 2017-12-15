@@ -38,14 +38,31 @@ namespace Bases
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            lista.ItemsSource = con.QueryTable("SELECT * FROM proveedor WHERE nombre like '%" + nombre.Text + "%'").DefaultView;
+            lista.ItemsSource = con.QueryTable("SELECT * FROM proveedor WHERE nombre ilike '%" + nombre.Text + "%'").DefaultView;
             lista.Columns[0].Visibility = Visibility.Collapsed;
         }
         private void borrar(object sender, RoutedEventArgs e )
         {
             var selectedItem = (DataRowView) lista.SelectedItem;
-             
-            MessageBox.Show(selectedItem["id_proveedor"].ToString());
+            var idToErase = selectedItem["id_proveedor"].ToString();
+            
+            try
+            {
+                var result = MessageBox.Show("¿Seguro que desea eliminar este proveedor?", "Warning", MessageBoxButton.YesNo);
+                if(result == MessageBoxResult.Yes)
+                {
+                    con.Query("DELETE FROM proveedor WHERE id_proveedor=" + idToErase);
+                    MessageBox.Show("Proveedor eliminado correctamente", "Exito");
+
+                    this.Close();
+                }
+                
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
 
         }
 

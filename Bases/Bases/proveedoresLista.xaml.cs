@@ -25,7 +25,7 @@ namespace Bases
             InitializeComponent();
             con = new Conexion();
             lista.ItemsSource = con.QueryTable("SELECT * FROM proveedor").DefaultView;
-            
+            lista.Columns[0].Visibility = Visibility.Collapsed;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

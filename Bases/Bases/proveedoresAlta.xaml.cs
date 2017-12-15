@@ -21,8 +21,8 @@ namespace Bases
     public partial class proveedoresAlta : Window
     {
         Conexion conn;
-
-        public proveedoresAlta()
+        string  id = "";
+        public proveedoresAlta(string id ="" )
         {
             InitializeComponent();
             List<String> listaEstados = new List<String>();
@@ -60,7 +60,28 @@ namespace Bases
             estados.CustomSource = listaEstados;
 
             conn = new Conexion();
-           
+            if (id !="" )
+            {
+                this.id = id;
+                agregar.Content = "Actualizar";
+                NpgsqlDataReader dataReader = conn.Query("Select * from proveedor where id_proveedor =" + id);
+                while (dataReader.Read())
+                {
+                    nombre.Text = dataReader[1].ToString();
+                    telefono.Text = dataReader[2].ToString();
+                    ciudad.Text = dataReader[3].ToString();
+                    estados.Text = dataReader[4].ToString();
+                    calle.Text = dataReader[5].ToString();
+                    numero.Text = dataReader[6].ToString();
+                    colonia.Text = dataReader[7].ToString();
+                    codigoPostal.Text = dataReader[8].ToString();
+
+
+                                       
+
+                }
+                dataReader.Close();
+            }
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -84,9 +105,20 @@ namespace Bases
         private void InsertProveedor(object sender, RoutedEventArgs e)
         {
             agregar.IsEnabled = false;
-            string campos = "DEFAULT,'"+nombre.Text + "','" + telefono.Text + "','" + estados.SelectedValue + "','" +
-                ciudad.Text + "','" + calle.Text + "','" + numero.Text + "','" + colonia.Text+"','"+codigoPostal.Text+ "'";
-            string query = "INSERT INTO proveedor(id_proveedor,nombre,telefono,estado,ciudad,calle,numero,colonia,cp) values(" + campos + ");";
+            string query= "";
+            if (id != "")
+            {
+                 query = "UPDATE proveedor SET nombre='" + nombre.Text + "',telefono='" + telefono.Text + "'," +
+                       "estado='" + estados.Text + "', ciudad='" + ciudad.Text + "',calle='" + calle.Text + "'," +
+                       "numero='" + numero.Text + "', colonia='" + colonia.Text + "',cp='" + codigoPostal.Text + "' " +
+                       "WHERE id_proveedor=" + id;
+            }
+            else
+            {
+                string campos = "DEFAULT,'" + nombre.Text + "','" + telefono.Text + "','" + estados.SelectedValue + "','" +
+                ciudad.Text + "','" + calle.Text + "','" + numero.Text + "','" + colonia.Text + "','" + codigoPostal.Text + "'";
+                 query = "INSERT INTO proveedor(id_proveedor,nombre,telefono,estado,ciudad,calle,numero,colonia,cp) values(" + campos + ");";
+            }
 
             try
             {
@@ -105,7 +137,7 @@ namespace Bases
                     queryPedido= "INSERT INTO proveedor_por_pedido(id_proveedor,email,pagina_web) values('" + maxId + "','" + camposPedido + "');";
                     conn.Query(queryPedido).Close();
                 }
-                MessageBox.Show("Proveedor agregado correctamente", "Exito!");
+                
                 nombre.Clear();
                 telefono.Clear();
                 ciudad.Clear();
@@ -115,6 +147,15 @@ namespace Bases
                 codigoPostal.Clear();
                 email.Clear();
                 website.Clear();
+                if (id !="" )
+                {
+                    MessageBox.Show("Proveedor modificado correctamente", "Exito!");
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Proveedor agregado correctamente", "Exito!");
+                }
             }
             catch (Exception ex)
             {

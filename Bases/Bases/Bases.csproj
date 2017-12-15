@@ -99,6 +99,9 @@
     <Compile Include="proveedoresModificar.xaml.cs">
       <DependentUpon>proveedoresModificar.xaml</DependentUpon>
     </Compile>
+    <Compile Include="proveedoresModificarFields.xaml.cs">
+      <DependentUpon>proveedoresModificarFields.xaml</DependentUpon>
+    </Compile>
     <Page Include="clients.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -178,6 +181,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="proveedoresModificar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="proveedoresModificarFields.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

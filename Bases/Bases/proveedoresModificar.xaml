@@ -5,15 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Bases"
         mc:Ignorable="d"
-        Title="Modificar proveedor" Height="298.189" Width="435.815">
+        Title="Modificar proveedor" Height="298.189" Width="553.908">
     <Grid>
-        <Label Content="ID" HorizontalAlignment="Left" Margin="17,10,0,0" VerticalAlignment="Top"/>
-        <Label Content="Nombre" HorizontalAlignment="Left" Margin="142,10,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="10,36,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="95"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="142,36,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <Button Content="Buscar" HorizontalAlignment="Left" Margin="329,36,0,0" VerticalAlignment="Top" Width="75"/>
-        <DataGrid HorizontalAlignment="Left" Height="103" Margin="17,98,0,0" VerticalAlignment="Top" Width="387"/>
-        <Button Content="Guardar" HorizontalAlignment="Left" Height="19" Margin="17,238,0,0" VerticalAlignment="Top" Width="57" Click="Button_Click"/>
+        <Label Content="Nombre" HorizontalAlignment="Left" Margin="17,19,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="nombre" HorizontalAlignment="Left" Height="23" Margin="17,45,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="buscar" Content="Buscar" Margin="455,45,16,0" VerticalAlignment="Top" Click="busqueda"/>
+        <DataGrid x:Name="lista" Margin="10,98,10,67"/>
+        <Button x:Name="modificar" Content="Modificar" HorizontalAlignment="Left" Height="20" Margin="14,238,0,0" VerticalAlignment="Top" Width="66" Click="openModificar"/>
         <Button Content="Atras" HorizontalAlignment="Left" Margin="88,238,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
 
     </Grid>
