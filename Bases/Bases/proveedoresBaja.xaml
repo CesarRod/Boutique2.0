@@ -1,0 +1,19 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Bases"
+        xmlns:syncfusion="http://schemas.syncfusion.com/wpf" x:Class="Bases.proveedoresBaja"
+        mc:Ignorable="d"
+        Title="Baja proveedor" Height="300" Width="469.277">
+    <Grid>
+        <Label Content="Nombre" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="nombre" HorizontalAlignment="Left" Height="23" Margin="10,30,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Button Content="Borrar" HorizontalAlignment="Left" Margin="10,239,0,0" VerticalAlignment="Top" Width="75" Click="borrar"/>
+        <Button Content="Buscar" HorizontalAlignment="Left" Margin="376,30,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>
+        <Button Content="Atras" HorizontalAlignment="Left" Margin="376,239,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+        <DataGrid x:Name="lista" SelectionMode="Single"  SelectionUnit="FullRow" HorizontalAlignment="Left" Height="150" Margin="15,75,0,0" VerticalAlignment="Top" Width="430"/>
+
+    </Grid>
+</Window>

@@ -1,0 +1,22 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Bases"
+        xmlns:syncfusion="http://schemas.syncfusion.com/wpf" x:Class="Bases.inventarioShow"
+        mc:Ignorable="d"
+        Title="Inventario" Height="402" Width="954">
+    <Grid>
+        <Button Content="Atras" HorizontalAlignment="Left" Margin="840,341,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+
+        <syncfusion:SfDataGrid x:Name="lista" Height="232" Margin="10,85,10,0" VerticalAlignment="Top"/>
+        <Label HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top">
+            <Label Content="Tipo de prenda"/>
+        </Label>
+        <syncfusion:AutoComplete x:Name="tiposList" HorizontalAlignment="Left" Height="26" Margin="10,45,0,0" VerticalAlignment="Top" Width="150"/>
+        <Button Content="Buscar" HorizontalAlignment="Left" Margin="730,45,0,0" VerticalAlignment="Top" Width="75" Height="26" Click="busqueda"/>
+        <Button Content="Limpiar busqueda" HorizontalAlignment="Left" Margin="815,45,0,0" VerticalAlignment="Top" Width="100" Height="26" Click="clearSearch"/>
+
+    </Grid>
+</Window>
