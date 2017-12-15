@@ -9,9 +9,9 @@
     <Grid>
         <Label Content="Nombre" HorizontalAlignment="Left" Height="25" Margin="10,10,0,0" VerticalAlignment="Top" Width="65"/>
         <TextBox HorizontalAlignment="Left" Height="20" Margin="10,40,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <DataGrid HorizontalAlignment="Left" Height="105" Margin="10,75,0,0" VerticalAlignment="Top" Width="380"/>
-        <Button x:Name="buscarButton" Content="Buscar" HorizontalAlignment="Left" Height="20" Margin="295,40,0,0" VerticalAlignment="Top" Width="95"/>
-        <Button x:Name="select1" Content="Seleccionar" HorizontalAlignment="Left" Height="20" Margin="295,185,0,0" VerticalAlignment="Top" Width="95"/>
+        <DataGrid HorizontalAlignment="Left" Height="105" Margin="10,75,0,0" VerticalAlignment="Top" Width="407"/>
+        <Button x:Name="buscarButton" Content="Buscar" HorizontalAlignment="Left" Height="20" Margin="353,40,0,0" VerticalAlignment="Top" Width="95"/>
+        <Button x:Name="select1" Content="Seleccionar" HorizontalAlignment="Left" Height="20" Margin="353,193,0,0" VerticalAlignment="Top" Width="95"/>
         <Separator HorizontalAlignment="Left" Height="5" Margin="0,220,0,0" VerticalAlignment="Top" Width="465"/>
         <Separator HorizontalAlignment="Left" Height="16" Margin="269,188,0,0" VerticalAlignment="Top" Width="392" RenderTransformOrigin="0.5,0.5">
             <Separator.RenderTransform>
@@ -25,9 +25,12 @@
         </Separator>
         <Label Content="Abono inicial" HorizontalAlignment="Left" Margin="10,230,0,0" VerticalAlignment="Top"/>
         <Label Content="Total" HorizontalAlignment="Left" Margin="322,230,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Height="24" Margin="10,256,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="95"/>
-        <TextBox HorizontalAlignment="Left" Height="24" Margin="322,256,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="95"/>
-        <Button Content="Atras" HorizontalAlignment="Left" Height="26" Margin="322,344,0,0" VerticalAlignment="Top" Width="110"/>
+        <TextBox x:Name="abonoInicial" HorizontalAlignment="Left" Height="24" Margin="10,256,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="95"/>
+        <TextBox x:Name="total" IsEnabled="False" HorizontalAlignment="Left" Height="24" Margin="322,256,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="95"/>
+        <Button x:Name="atras" Content="Atras" HorizontalAlignment="Left" Height="26" Margin="340,344,0,0" VerticalAlignment="Top" Width="92"/>
+        <Button x:Name="save" Content="Guardar" HorizontalAlignment="Left" Margin="14,344,0,0" VerticalAlignment="Top" Width="75" Height="26"/>
+        <Label Content="Articulos" HorizontalAlignment="Left" Margin="475,10,0,0" VerticalAlignment="Top" Height="25" Width="65"/>
+        <TextBox HorizontalAlignment="Left" Height="30" Margin="485,40,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="100"/>
 
     </Grid>
 </Window>
