@@ -14,15 +14,15 @@
         </Grid.ColumnDefinitions>
         <Label Grid.ColumnSpan="2" Content="Modelo" HorizontalAlignment="Left" Margin="10,5,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="modelo" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="23" Margin="15,31,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label Grid.ColumnSpan="2" Content="Precio Venta" HorizontalAlignment="Left" Margin="214,5,0,0" VerticalAlignment="Top" Width="81"/>
-        <Label Grid.ColumnSpan="2" Content="Precio Proveedor&#xA;" HorizontalAlignment="Left" Margin="214,58,0,0" VerticalAlignment="Top" Height="26"/>
-        <Label Grid.ColumnSpan="2" Content="Descripcion&#xA;" HorizontalAlignment="Left" Margin="5,169,0,0" VerticalAlignment="Top" Height="25"/>
+        <Label Grid.ColumnSpan="2" Content="Precio Venta" HorizontalAlignment="Left" Margin="290,5,0,0" VerticalAlignment="Top" Width="81"/>
+        <Label Grid.ColumnSpan="2" Content="Precio Proveedor&#xA;" HorizontalAlignment="Left" Margin="290,58,0,0" VerticalAlignment="Top" Height="26"/>
+        <Label Grid.ColumnSpan="2" Content="Descripcion&#xA;" HorizontalAlignment="Left" Margin="5,145,0,0" VerticalAlignment="Top" Height="25"/>
         <Label Grid.ColumnSpan="2" Content="Tipo de prenda" HorizontalAlignment="Left" Margin="15,58,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="precioVenta" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="23" Margin="214,31,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="precioProv" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="23" Margin="214,84,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="agregar" Grid.ColumnSpan="2" Content="Agregar" HorizontalAlignment="Left" Height="20" Margin="5,278,0,0" VerticalAlignment="Top" Width="67" Click="Button_Click"/>
-        <Button Grid.ColumnSpan="2" Content="Atras" HorizontalAlignment="Left" Margin="370,278,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>
-        <TextBox x:Name="description" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="72" Margin="8,196,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="437"/>
+        <TextBox x:Name="precioVenta" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="23" Margin="290,31,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="precioProv" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="23" Margin="290,84,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="agregar" Grid.ColumnSpan="2" Content="Agregar" HorizontalAlignment="Left" Height="20" Margin="10,270,0,0" VerticalAlignment="Top" Width="67" Click="Button_Click"/>
+        <Button Grid.ColumnSpan="2" Content="Atras" HorizontalAlignment="Left" Margin="360,270,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>
+        <TextBox x:Name="description" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="72" Margin="8,175,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="437"/>
 
         <syncfusion:AutoComplete x:Name="tipoPrenda" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="22" Margin="15,84,0,0" VerticalAlignment="Top" Width="150"/>
 

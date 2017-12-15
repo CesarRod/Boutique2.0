@@ -13,7 +13,7 @@
         <Button Content="Borrar" HorizontalAlignment="Left" Margin="10,239,0,0" VerticalAlignment="Top" Width="75" Click="borrar"/>
         <Button Content="Buscar" HorizontalAlignment="Left" Margin="376,30,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>
         <Button Content="Atras" HorizontalAlignment="Left" Margin="376,239,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
-        <DataGrid x:Name="lista" SelectionMode="Single"  SelectionUnit="FullRow" HorizontalAlignment="Left" Height="150" Margin="15,75,0,0" VerticalAlignment="Top" Width="430"/>
+        <DataGrid x:Name="lista" CanUserAddRows="False" SelectionMode="Single"  SelectionUnit="FullRow" Margin="15,75,16,44"/>
 
     </Grid>
 </Window>

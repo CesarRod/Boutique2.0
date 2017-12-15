@@ -10,9 +10,9 @@
         <Label Content="Nombre" HorizontalAlignment="Left" Margin="17,19,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="nombre" HorizontalAlignment="Left" Height="23" Margin="17,45,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
         <Button x:Name="buscar" Content="Buscar" Margin="455,45,16,0" VerticalAlignment="Top" Click="busqueda"/>
-        <DataGrid x:Name="lista" Margin="10,98,10,67"/>
-        <Button x:Name="modificar" Content="Modificar" HorizontalAlignment="Left" Height="20" Margin="14,238,0,0" VerticalAlignment="Top" Width="66" Click="openModificar"/>
-        <Button Content="Atras" HorizontalAlignment="Left" Margin="88,238,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+        <DataGrid x:Name="lista" CanUserAddRows="False" Margin="10,98,10,67"/>
+        <Button x:Name="modificar" Content="Modificar" HorizontalAlignment="Left" Height="20" Margin="11,230,0,0" VerticalAlignment="Top" Width="66" Click="openModificar"/>
+        <Button Content="Atras" HorizontalAlignment="Left" Margin="85,230,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
 
     </Grid>
 </Window>

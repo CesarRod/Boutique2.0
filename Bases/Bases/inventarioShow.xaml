@@ -6,17 +6,17 @@
         xmlns:local="clr-namespace:Bases"
         xmlns:syncfusion="http://schemas.syncfusion.com/wpf" x:Class="Bases.inventarioShow"
         mc:Ignorable="d"
-        Title="Inventario" Height="402" Width="954">
+        Title="Inventario" Height="402" Width="724">
     <Grid>
-        <Button Content="Atras" HorizontalAlignment="Left" Margin="840,341,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
-
-        <syncfusion:SfDataGrid x:Name="lista" Height="232" Margin="10,85,10,0" VerticalAlignment="Top"/>
+        <Button Content="Atras"  HorizontalAlignment="Left" Margin="625,335,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click" Height="20">
+        </Button>
         <Label HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top">
             <Label Content="Tipo de prenda"/>
         </Label>
         <syncfusion:AutoComplete x:Name="tiposList" HorizontalAlignment="Left" Height="26" Margin="10,45,0,0" VerticalAlignment="Top" Width="150"/>
-        <Button Content="Buscar" HorizontalAlignment="Left" Margin="730,45,0,0" VerticalAlignment="Top" Width="75" Height="26" Click="busqueda"/>
-        <Button Content="Limpiar busqueda" HorizontalAlignment="Left" Margin="815,45,0,0" VerticalAlignment="Top" Width="100" Height="26" Click="clearSearch"/>
+        <Button Content="Buscar" HorizontalAlignment="Left" Margin="515,45,0,0" VerticalAlignment="Top" Width="75" Height="26" Click="busqueda"/>
+        <Button Content="Limpiar busqueda" HorizontalAlignment="Left" Margin="600,45,0,0" VerticalAlignment="Top" Width="100" Height="26" Click="clearSearch"/>
+        <DataGrid x:Name="lista" CanUserAddRows="False" HorizontalAlignment="Left" Height="230" Margin="11,90,0,0" VerticalAlignment="Top" Width="689"/>
 
     </Grid>
 </Window>

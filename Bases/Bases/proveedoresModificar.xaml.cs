@@ -36,6 +36,7 @@ namespace Bases
         {
             string query = "Select * FROM proveedor WHERE nombre ilike '%" + nombre.Text + "%'";
             lista.ItemsSource =  conn.QueryTable(query).DefaultView;
+            lista.Columns[0].Visibility = Visibility.Collapsed;
         }
         private void openModificar(object sender, RoutedEventArgs e)
         {
